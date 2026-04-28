@@ -35,6 +35,15 @@ A full-stack **E-Commerce Shopping Cart application** built using **Spring Boot 
 
 ### Database
 
+Create MySQL user and grant privileges:
+
+```sql
+CREATE USER IF NOT EXISTS 'ecommerceapp'@'localhost' IDENTIFIED BY 'ecommerceapp';
+GRANT ALL PRIVILEGES ON `full-stack-ecommerce`.* TO 'ecommerceapp'@'localhost';
+ALTER USER 'ecommerceapp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'ecommerceapp';
+FLUSH PRIVILEGES;
+```
+
 - MySQL (Country / State / Orders / Products)
 
 ---
@@ -212,6 +221,6 @@ npm start -- --configuration=qa
 ✔ Frontend Complete  
 ✔ Security Integrated  
 ✔ Payment System Integrated  
-✔ Production-ready Architecture  
+✔ Production-ready Architecture
 
 ---
